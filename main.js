@@ -108,3 +108,25 @@ document.addEventListener("DOMContentLoaded", () => {
     displayCart();
     updateCount();
 });
+
+    function toggleMobileMenu() {
+        const menu = document.getElementById('mobileMenu');
+        const icon = document.getElementById('menuIcon');
+        
+        menu.classList.toggle('hidden');
+        
+        if (menu.classList.contains('hidden')) {
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+        } else {
+            icon.classList.remove('fa-bars');
+            icon.classList.add('fa-times');
+        }
+    }
+
+    document.querySelectorAll('#mobileMenu a').forEach(link => {
+        link.addEventListener('click', () => {
+            document.getElementById('mobileMenu').classList.add('hidden');
+            document.getElementById('menuIcon').classList.replace('fa-times', 'fa-bars');
+        });
+    });

@@ -31,11 +31,11 @@
 
         <div class="hidden md:flex items-center space-x-10">
             <a href="index.html" class="font-semibold hover:text-[#74512D] transition-all duration-300 pb-1">Home</a>
-            <a href="products.html" class="font-semibold hover:text-[#74512D] transition-all duration-300 pb-1 border-[#74512D]">Menu</a>
+            <a href="products.html" class="font-semibold hover:text-[#74512D] transition-all duration-300 pb-1">Menu</a>
             <a href="#why-us" class="font-semibold hover:text-[#74512D] transition-all duration-300 pb-1">About Us</a>
         </div>
 
-        <div class="flex items-center gap-6">
+        <div class="flex items-center gap-4 md:gap-6">
             <button onclick="openLogin()" class="hover:text-[#74512D] transition-colors">
                 <i class="fa-regular fa-user text-2xl"></i>
             </button>
@@ -43,6 +43,30 @@
                 <i class="fa-solid fa-cart-arrow-down"></i>
                 <span id="cartCount" class="absolute -top-2 -right-2 bg-[#D4A373] text-white text-[9px] w-4 h-4 flex items-center justify-center rounded-full font-bold shadow-sm">0</span>
             </button>
+            
+            <button onclick="toggleMobileMenu()" class="md:hidden text-2xl text-[#3C2A21] focus:outline-none">
+                <i id="menuIcon" class="fas fa-bars transition-all duration-300"></i>
+            </button>
+        </div>
+    </div>
+
+    <div id="mobileMenu" class="hidden md:hidden absolute top-full left-0 w-full bg-[#D9CFC7] border-t border-[#3C2A21]/10 shadow-xl py-8 px-6">
+        <div class="flex flex-col space-y-6 text-center">
+            <a href="index.html" class="text-[#3C2A21] font-bold text-xl hover:text-[#D4A373] transition-colors">Home</a>
+            <a href="products.html" class="text-[#3C2A21] font-bold text-xl hover:text-[#D4A373] transition-colors">Menu</a>
+            <a href="#why-us" class="text-[#3C2A21] font-bold text-xl hover:text-[#D4A373] transition-colors">About Us</a>
+            <hr class="border-[#3C2A21]/10">
+             <div class="flex  justify-center gap-4">
+                <a href="#" class="w-10 h-10 border border-[#3C2A21]/30 rounded-full flex items-center justify-center text-[#3C2A21] hover:bg-[#3C2A21] hover:text-[#D9CFC7] transition-all duration-300">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="w-10 h-10 border border-[#3C2A21]/30 rounded-full flex items-center justify-center text-[#3C2A21] hover:bg-[#3C2A21] hover:text-[#D9CFC7] transition-all duration-300">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="w-10 h-10 border border-[#3C2A21]/30 rounded-full flex items-center justify-center text-[#3C2A21] hover:bg-[#3C2A21] hover:text-[#D9CFC7] transition-all duration-300">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
         </div>
     </div>
 </nav>
